@@ -9,13 +9,15 @@ public class Util {
     // реализуйте настройку соеденения с БД
     private static Connection connection;
 
+        static final String DB_URL = "jdbc:mysql://localhost:3306/test_db";
+        static final String USER = "jpauser";
+        static final String PASSWORD = "jpapwd";
 
     public static Connection getConnection() {
 
         try {
 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test_db",
-                    "jpauser", "jpapwd");
+            connection = DriverManager.getConnection(DB_URL, USER, PASSWORD);
 
         } catch (SQLException e) {
             e.printStackTrace();
