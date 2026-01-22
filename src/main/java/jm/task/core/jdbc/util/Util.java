@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 public class Util {
 
     public static SessionFactory getSessionFactory() {
+
         SessionFactory sessionFactory = null;
         try {
             Configuration configuration = new Configuration();
